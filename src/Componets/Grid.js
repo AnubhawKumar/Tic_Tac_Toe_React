@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 
 import "../assets/css/grid.css";
-const Grid = ({ turn, data, winner, setGrid }) => {
+const Grid = ({ turn, data, winner, setGrid ,setReset}) => {
   const renderValue = (value) => {
     if (value === "cross") {
       return "X";
@@ -23,13 +23,15 @@ const Grid = ({ turn, data, winner, setGrid }) => {
       </div>
       <div className="grid-turn">{`Turn : ${turn}`}</div>
       {winner ? (
-        <div className="grid-result">{`Player ${
+        <div className="grid-result result-winner">{`Player ${
           turn === "cross" ? "circle" : "cross"
         } won`}</div>
       ) : null}
       {!winner && !data.filter((value) => value === null).length ? (
-        <div className="grid-result">Match Draw</div>
+        <div className="grid-result result-draw">Match Drawn</div>
       ) : null}
+
+      <button className="btn" onClick={() => setReset()}>RESET GAME</button>
     </Fragment>
   );
 };

@@ -36,9 +36,20 @@ function App() {
     }
   };
 
+  const resetGame = () => {
+    setTurn("circle");
+    setData([null, null, null, null, null, null, null, null, null]);
+    setWinner(undefined);
+  };
   return (
     <div className="App">
-      <Grid turn={turn} data={data} winner={winner} setGrid={onChangeGrid} />
+      <Grid
+        turn={turn}
+        data={data}
+        winner={winner}
+        setGrid={onChangeGrid}
+        setReset={resetGame}
+      />
     </div>
   );
 }

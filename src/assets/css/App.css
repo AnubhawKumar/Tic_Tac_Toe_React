@@ -1,5 +1,6 @@
 .App {
-  background-color: lightgray;
+  /* background-color: lightgray; */
+  background-color: black;
   height: 100vh;
   display: flex;
   flex-direction: column;

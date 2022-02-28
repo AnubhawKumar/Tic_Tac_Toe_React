@@ -14,7 +14,33 @@
 }
 .grid-turn{
     font-size: 22px;
+    color: white;
 }
 .grid-result{
     font-size: 25px;
+    font-weight: bold;
+    width: 250px;
+    padding: 12px 0px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+.result-winner{
+  color:green;
+}
+.result-draw{
+  color: red;
+}
+.btn{
+  margin-top: 10px;
+  width: 250px;
+  padding: 15px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(33, 121, 33);
+  color: white;
+  font-size: 22px;
+  border-radius: 25px;
 }
